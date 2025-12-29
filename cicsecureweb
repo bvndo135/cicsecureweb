@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>CIC – Se connecter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: #f2f4f5;
+      color: #222;
+    }
+
+    /* HEADER */
+    header {
+      background: white;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .menu {
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.4rem;
+      color: #003a8f;
+    }
+
+    .logo span {
+      color: #d4002a;
+      margin: 0 2px;
+    }
+
+    /* MAIN */
+    main {
+      max-width: 420px;
+      margin: 1.5rem auto;
+      background: white;
+      padding: 2rem 1.5rem;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.6rem;
+    }
+
+    label {
+      display: block;
+      margin-top: 1.2rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.7rem;
+      margin-top: 0.4rem;
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    .password-wrapper {
+      position: relative;
+    }
+
+    .toggle {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 1.8rem;
+      padding: 0.9rem;
+      background: #0a7f7a;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #066a66;
+    }
+
+    .links {
+      margin-top: 1.8rem;
+      border-top: 1px solid #ddd;
+    }
+
+    .links a {
+      display: block;
+      padding: 0.9rem 0;
+      color: #0a7f7a;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid #eee;
+    }
+
+    .links a:last-child {
+      border-bottom: none;
+    }
+
+    /* FOOTER */
+    footer {
+      margin: 2rem auto 1rem;
+      max-width: 420px;
+      font-size: 0.75rem;
+      color: #777;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .pedago {
+      margin-top: 0.6rem;
+      font-size: 0.7rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="menu">☰ Menu</div>
+  <div class="logo">C<span>I</span>C</div>
+  <div>🔍</div>
+</header>
+
+<main>
+  <h1>Se connecter</h1>
+
+  <label for="login">Identifiant *</label>
+  <input type="text" id="login" autocomplete="username">
+
+  <label for="password">Mot de passe *</label>
+  <div class="password-wrapper">
+    <input type="password" id="password" autocomplete="current-password">
+    <span class="toggle" onclick="togglePassword()">👁</span>
+  </div>
+
+  <button onclick="simulateLogin()">Se connecter</button>
+
+  <div class="links">
+    <a href="#">Codes d'accès oubliés →</a>
+    <a href="#">Infos sécurité →</a>
+    <a href="#">Mentions légales →</a>
+    <a href="#">Protection des données →</a>
+  </div>
+</main>
+
+<footer>
+  © Projet CIC  
+  <div class="pedago">
+    Projet réalisé dans un cadre pédagogique.
+  </div>
+</footer>
+
+<script>
+  function togglePassword() {
+    const pwd = document.getElementById("password");
+    pwd.type = pwd.type === "password" ? "text" : "password";
+  }
+
+  function simulateLogin() {
+    // Simulation uniquement
+    alert("Connexion en cours…");
+  }
+</script>
+
+</body>
+</html>
